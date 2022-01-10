@@ -1,0 +1,106 @@
+Requerimientos:
+
+Se solicita desarrollar una “FACTURA” para conocer el monto a ser cobrado en un
+negocio, partiendo de los siguientes puntos:
+
+
+	1. Debe permitir al vendedor ingresar: Nombre, apellido, cedula de identidad, dirección
+	y teléfono del cliente.
+
+	2. Se debe seleccionar de una lista los siguientes datos: Nombre del producto,
+	cantidad de artículos por producto, el costo del producto (puede estar preestablecido
+	o escribirlo de forma manual).
+
+	3. Calcular:
+		 Total Sin IVA
+		 IVA (Impuesto al Valor Agregado)
+		 Total con IVA
+
+	4. La cantidad mínima de productos a ser registrados en la factura es de tres (03).
+
+	5. Luego de llenar la factura el usuario procede a dar click en Calcular (botón), para
+	generar el total a ser pagado por el Cliente.
+
+	6. Su desarrollo es únicamente con PHP y HTML.
+
+	7. No será aceptado con ningún otro lenguaje para la funcionalidad solicitada.
+
+	8. Es posible enriquecer el diseño visual con CSS y/o imágenes.
+	
+	9. De existir dos códigos iguales se evaluara el primero que llegue al correo o se dividirá
+	la nota entre la cantidad de estudiantes.
+
+
+
+
+
+	<?php 
+
+		$archivo = fopen("data.txt", "rb");
+		if ($archivo == false) {
+			echo "Error al abrir el archivo";
+		}else{
+			$cadena1 = fread($archivo, 4);
+			rewind($archivo);
+			$cadena2 = fread($archivo, filesize("data.txt"));
+			rewind($archivo);
+			$texto3 = file("data.txt");
+		}
+
+		if (($cadena1 == false) || ($cadena2 == false)){
+			echo "error al imprimir el archivo";
+		}else{
+			echo "<p>\$contenido1 es: [" . $cadena1 . "]</p>";
+			echo "<p>\$contenido2 es: [" . $cadena2 . "]</p>";
+			echo "<p>\$El nombre del usuario es: [" . $texto3[0] . "]</p>";
+			echo "<p>\$El apellido del usuario es: [" . $texto3[1] . "]</p>";
+			echo "<p>\$El numero telefonico del usuario es: [" . $texto3[4] . "]</p>";
+		}
+
+		fclose($archivo)
+	 ?>
+
+
+<?php
+		#Lista de Precios
+		$precios = [
+			"berenjena" => 2.0, "brocoli" => 1.7, "calabaza" => 2.2,
+			"cambur" => 0.3, "cebolla" => 0.7, "coco" => 1.6,
+			"fresa" => 0.2, "guayaba" => 0.8, "lechuga" => 1.0,
+			"limon" => 0.7, "mango" => 0.2, "naranja" => 0.4,
+			"patilla" => 2.5, "piña" => 1.0, "zanahoria" => 0.3
+		];
+
+		#Lista de Cantidad ingresada por el usuario
+		$candidad = [
+			"berenjena" => $_POST["berenjena"], "brocoli" => $_POST["brocoli"], "calabaza" => $_POST["calabaza"],
+			"cambur" => $_POST["cambur"], "cebolla" => $_POST["cebolla"], "coco" => $_POST["coco"],
+			"fresa" => $_POST["fresa"], "guayaba" => $_POST["guayaba"], "lechuga" => $_POST["lechuga"],
+			"limon" => $_POST["limon"], "mango" => $_POST["mango"], "naranja" => $_POST["naranja"],
+			"patilla" => $_POST["patilla"], "piña" => $_POST["piña"], "zanahoria" => $_POST["zanahoria"]
+		];
+
+		#Lista de Precios
+		#$factura = [];
+		foreach ($candidad as $key => $value) {
+			if ($value != 0) {
+				echo $key . ": " . $precios[$key] . "$ " . $value . "Uds " . $precios[$key] * $value;
+				echo "<br> <br>";	
+			}
+		}
+
+
+	?>
+
+
+
+	<?php 
+
+			$texto_error = '<section class="factura">
+								<div class="saludo">
+									<h3 class="nota">Lo sentimos, Tiene que adquirir 3 productos mínimos</h3>
+									<p class="nota"></p>
+								</div>
+							</section>';
+			echo $texto_error;
+		 ?>

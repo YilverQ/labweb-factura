@@ -1,0 +1,306 @@
+/*Para Todo*/
+*{margin:0;padding:0;}
+a{text-decoration: none;}
+li{list-style: none;}
+body{
+    font-family:sans-serif;
+    background: #e5e7e9;
+}
+
+p{
+    color: #424949;
+    font-weight: 500;
+    font-family: fuente2;
+}
+
+/*Fuentes*/
+@font-face{
+    font-family: fuente1;
+    src:url(../fuentes/Allerta-Regular.ttf); 
+}
+
+@font-face{
+    font-family: fuente2;
+    src:url(../fuentes/JosefinSans-Bold.ttf); 
+}
+/*Fin de la Fuentes*/
+
+
+/*header*/
+header{
+	width: 100%;
+}
+
+nav {
+	padding: 5px 0px;
+	width: 80%;
+	margin: auto;
+	border-bottom: 2px solid rgba(80,80,80, .5);
+}
+
+nav h2{
+	font-family: fuente2;
+	color: #0d0f0f;
+	margin-left: 2%;
+}
+
+/* fin del header*/
+
+
+
+
+/*Articulo Principal*/
+article{
+	width: 100%;
+}
+
+.formulario{
+	width: 75%;
+	margin: 6% auto;
+}
+
+.formulario h3, .articulos_venta h3{
+	font-size: 1.3em;
+	font-family: fuente1;
+	color: #0d0f0f; 
+	text-align: center;	
+}
+
+.formulario form{
+	width: 90%;
+	display: flex;
+	flex-wrap: wrap;	
+	justify-content: center;
+	margin: 15px auto auto auto;
+	padding: 20px 0px;
+
+	background: #f2f2f2;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px rgba(10,10,10,.3);
+}
+
+.formulario form input{
+	padding: 5px;
+	font-family: fuente1;
+}
+
+.bloque_1, .bloque_2{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 10px 0px;
+}
+
+.bloque_2 .name{
+	margin: 0px 5px;
+}
+
+.bloque_1 input{
+	width: 300px;
+}
+
+.botonEnviar{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+}
+
+.boton{
+	padding: 10px;
+	margin-top: 15px;
+	font-family: fuente1;
+}
+/*Fin del Articulo Principal*/
+
+
+/*Media Query*/
+@media only screen and (max-width:745px){
+    
+    .bloque_2{
+    	width: 100%;
+    	margin-top: 10px;
+    }
+
+    .bloque_2 input{
+    	width: 300px;
+    }
+
+    .bloque_2 .name{
+    	margin-top: 15px;
+    }
+}
+
+@media only screen and (max-width:500px){
+    
+    .formulario{
+		width: 100%;
+    }
+	
+	.bloque_2 .name{
+		margin: 15px 0px 0px 0px;
+	}
+}
+
+@media only screen and (max-width:359px){
+
+    .bloque_1, .bloque_2 input{
+    	width: 100%;
+    	margin: auto;
+    	padding: 5px 0px;
+    }
+
+    .name, .dato{
+    	width: 90%; 
+    }
+
+	.formulario form input{
+		padding: 5px 0px;
+	}
+
+	form, article, .formulario{
+		width: 100%;
+	}
+
+	.bloque_1 input{
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+/*Frutas*/
+.articulos_venta{
+	width: 75%;
+	margin: auto;
+	margin: 6% auto;
+}
+
+.articulos_venta form{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	background: #f2f2f2;
+	justify-content: center;
+}
+
+div.articulo{
+	padding: 10px;
+	margin: 10px 10px;
+	border: 2px solid rgba(10,10,10,0.2);
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px rgba(10,10,10,0.1);
+}
+
+.imagen {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.imagen img{
+	display: block;
+}
+
+.articulo h4{
+	font-family: fuente2;
+}
+
+.articulo .bottom {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+} 
+
+.articulo .btm{
+	width: 45%;
+}
+
+.btm input{
+	width: 100%;
+	text-align: center;
+	padding: 2px 0px;
+}
+/*Fin de Frutas*/
+
+
+
+
+/*factura*/
+.factura, .success{
+	width: 75%;
+	margin: 6% auto;
+	background: #f2f2f2;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 10px;
+
+	background: #f2f2f2;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px rgba(10,10,10,.3);
+}
+
+.saludo{
+	width: 100%;
+	height: 400px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.saludo h3.nota{
+	text-align: center;
+	width: 100%;
+}
+
+
+.name_user, .table_frutas, .table_user{
+	width: 95%;
+	margin: auto;
+	text-align: center;
+}
+
+.table_frutas thead{
+	padding: 10px;
+	background: #0d0f0f;
+	color: #f2f2f2;
+}
+
+div.iva{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.iva .bloque{
+	width: 100%;
+	margin-top: 15px; 
+}
+/*Fin factura*/
+
+
+@media only screen and (max-width:500px){ 
+    .success{
+    	width: 84%;
+    }
+}
+
+
+
+/*Footer*/
+footer{
+	width: 100%;
+	padding: 20px 0px;
+}
+footer p{
+	text-align: center;
+}
+/*Fin del footer*/

@@ -1,0 +1,66 @@
+Estructura de la Pagina:
+
+Pagina 1:
+	
+	Nombre
+	Apellido
+	Cedula de Identidad
+	Direccion
+	Telefono
+......------......------......
+......------......------......
+......------......------......
+......------......------......
+Pagina 2:
+	
+	Nombre del Producto
+	Cantidad de Articulos
+	Coste del Producto
+......------......------......
+......------......------......
+......------......------......
+......------......------......
+Pagina 3:
+	
+	__Generar Factura__
+	Datos del Usuario:
+		Nombre y apellido
+		Cedula de identidad
+		Direccion 
+		Número de telefono
+
+	Lista de Productos:
+		N_producto. 	Name_product. 	N_cantidad.		P_producto.		P_total
+		N_producto. 	Name_product. 	N_cantidad.		P_producto.		P_total
+		N_producto. 	Name_product. 	N_cantidad.		P_producto.		P_total
+
+	IVA:
+		Total sin IVA
+		IVA (Impuesto al Valor Agregado)
+		Total con IVA
+......------......------......
+......------......------......
+......------......------......
+......------......------......
+
+Frutas:
+	1. 	Manzana
+	2. 	Pera
+	3. 	Patilla
+	4. 	Kiwi
+	5. 	Uva
+	6. 	Mora
+	7. 	Melocoton
+	8. 	Piña
+	9. 	Aguacate
+	10. Mango
+	11. Manzana
+	12. Pera
+	13. 
+	14. 
+	15. 
+	16. 
+	17. 
+	18. 
+	19. 
+	20. 
