@@ -1,3 +1,25 @@
+<?php
+	#Obtener los usuarios dentro de una matriz
+	$usuario = [$_POST["nombre"], $_POST["apellido"],
+				$_POST["cedula"], $_POST["direccion"],
+				$_POST["telefono"]];
+
+	#abrir un documento txt
+	$archivo = fopen("data_user.txt", "w");
+	$texto = "";
+
+	#agregar los datos del usuario a una cadena de texto
+	for ($i=0; $i < 5; $i++) { 
+		$texto = $texto . $usuario[$i];
+		if ($i < 4) {
+			$texto = $texto . "\n"; #Dar un salto de linea
+		}
+	}
+
+	#escribir los datos del usuario en el archivo txt
+	fwrite($archivo, $texto);
+	fclose($archivo); #cerrar el documento
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -244,27 +266,5 @@
 		<p>CI: 28333459</p>
 		<p>Email: yilver0906@gmail.com</p>
 	</footer>
-	<?php
-		#Obtener los usuarios dentro de una matriz
-		$usuario = [$_POST["nombre"], $_POST["apellido"],
-					$_POST["cedula"], $_POST["direccion"],
-					$_POST["telefono"]];
-
-		#abrir un documento txt
-		$archivo = fopen("data_user.txt", "w");
-		$texto = "";
-
-		#agregar los datos del usuario a una cadena de texto
-		for ($i=0; $i < 5; $i++) { 
-			$texto = $texto . $usuario[$i];
-			if ($i < 4) {
-				$texto = $texto . "\n"; #Dar un salto de linea
-			}
-		}
-
-		#escribir los datos del usuario en el archivo txt
-		fwrite($archivo, $texto);
-		fclose($archivo); #cerrar el documento
-	?>
 </body>
 </html>
